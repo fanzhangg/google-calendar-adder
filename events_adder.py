@@ -38,12 +38,12 @@ def get_service():
     return build('calendar', 'v3', credentials=creds)
 
 
-def get_events():
+def get_events(url: str, table_head: str)->list:
     """
     Get the events from the table
     :return: events
     """
-    parser = TableParser('https://www.macalester.edu/registrar/academiccalendars/#a20182019', 'Spring 2019')
+    parser = TableParser(url, table_head)
     return parser.extract_table()
 
 
@@ -140,7 +140,9 @@ def add_events(events, service):
 
 
 if __name__ == "__main__":
-    events = get_events()
+    url = input('url:')
+    head = input('head')
+    events = get_events(url, head)
     service = get_service()
     add_events(events, service)
 
