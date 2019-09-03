@@ -7,7 +7,5 @@ Extract event information from the table on the web page, and add the event to t
 - Input the table's head\
     \* Your table is next to the head element by default. (FYI: [Academic Calendars](https://www.macalester.edu/registrar/academiccalendars/) The first column is the date and the last column is the summary
      by default. If the target table has a format different from this one, please change the script manually
-- run the problem
-- WITNESS THE MIRACLE!
-
+- Run the problem
      
